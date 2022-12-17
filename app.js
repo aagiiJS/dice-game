@@ -22,4 +22,6 @@ document.querySelector("#current-0").textContent = 0;
 Document.querySelector("#current-1").textContent = 0;
 
 // Шоогоо арилгах
-document.getElementsByClassName(".dice").style.display = "none";
+document.getElementsByClassName("dice").style.display = "none";
+
+// Шоо орхих
