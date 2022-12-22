@@ -59,7 +59,7 @@ function initGame() {
     diceDom.style.display = "none";
 }
 
-// roll dice товчийг дарах Шоо орхих
+// roll dice товчийг дарж, Шоо орхих эвент листинер
 document.querySelector(".btn-roll").addEventListener("click", function() {
    if(isNewGame === true) {
     var diceNumber = Math.floor(Math.random() * 6) + 1;
@@ -85,7 +85,7 @@ if (diceNumber !== 1) {
    }
 });
 
-// Hold товчны эвент листенер
+// Hold товчийг дарж оноогоо цуглуулах эвент листенер
 document.querySelector(".btn-hold").addEventListener("click", function() {
     if(isNewGame === true) {
         // Тоглогчийн цуглуулсан оноог глобаль оноон дээр нэмэх
