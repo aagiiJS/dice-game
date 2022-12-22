@@ -81,7 +81,7 @@ if (diceNumber !== 1) {
     swichToNextPlayer();
 }
    } else {
-    alert(" Тоглоом дууссан байна.  Та New game товчийг дарж тоглоомоо шинээр эхлүүлнэ үү?.");
+    alert(" Тоглоом дууссан байна.  Та Start game товчийг дарж тоглоомоо шинээр эхлүүлнэ үү?.");
    }
 });
 
@@ -114,7 +114,7 @@ document.querySelector(".btn-hold").addEventListener("click", function() {
             swichToNextPlayer();
         }
     } else {
-        alert("Тоглоом дууссан байна. Та New game товчийг дарж тоглооиоо шинээр эхлүүлнэ үү?");
+        alert("Тоглоом дууссан байна. Та Start game товчийг дарж тоглооиоо шинээр эхлүүлнэ үү?");
     }
 });
 
