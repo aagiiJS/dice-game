@@ -44,29 +44,53 @@ if (diceNumber !== 1) {
 } else {
     // 1 буусан бол тоглогчийн ээлжийг солино. 
 
+    swichToNextPlayer();
+}
+});
+
+// Hold товчны эвент листенер
+document.querySelector(".btn-hold").addEventListener("click", function() {
+    // Тоглогчийн цуглуулсан оноог глобаль оноон дээр нэмэх
+        //if(activePlayer=== 0) {
+            //scores[0] = scores[0] + roundScore;
+        //} else {
+            //scores[1] = scores[1] + roundScore;
+        //} гэж кодлож болох ч гэсэн дараах байдлаар бичиж болно
+        scores[activePlayer] = scores[activePlayer] + roundScore;
+        
+        //Дэлгэц дээр оноог өөрчилнө
+        document.getElementById("score-" + activePlayer).textContent = scores[activePlayer];
+    
+        // Уг тоглогч хожсон эсэхийг(Оноо 100-гаас их болсон эсэх) шалгах
+        if(scores[activePlayer] >= 100) {
+            // Оноо 100 болгонгуут Та хожлоо бичиг гаргаж, улаан цэг(active)-ийг арилгах 
+            document.getElementById("name-" + activePlayer).textContent = 'Та хожлоо';
+            document.querySelector(".player-" + activePlayer + "-panel").classList.add("winner");
+            document.querySelector(".player-" + activePlayer + "-panel").classList.remove("active");
+
+        } else {
+            // Тоглогчийн ээлжийг солино.
+            swichToNextPlayer();
+        }
+        
+
+    
+});
+
+function swichToNextPlayer() {
     // энэ тоглогчийн ээлжиндээ цуглуулсан оноог 0 болгоно
     roundScore = 0;
     document.getElementById("current-" + activePlayer).textContent = 0;
     //Хэрэв идэвхтэй тоглогч нь 0 байвал идэвхтэй тоглогчийг 1 болго
     //үгүй бол идэвхтэй тоглогчийг 0 болго.
     activePlayer === 0 ? (activePlayer = 1) : (activePlayer = 0);
-
+    
     // улаан цэгийг шилжүүлэх
     document.querySelector(".player-0-panel").classList.toggle("active");
     document.querySelector(".player-1-panel").classList.toggle("active");
 
     diceDom.style.display = "none";
-
-    // if (activePlayer === 0) {
-    //     activePlayer = 1;
-    // } else {
-    //     activePlayer = 0;
-    // }
 }
-
-    
-});
-
 
     
 
