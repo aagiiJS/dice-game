@@ -136,6 +136,10 @@ function swichToNextPlayer() {
 // New game товчны эвент лисэенер
 document.querySelector(".btn-new").addEventListener("click", initGame);
 
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();   
+});
+
 
 
     
