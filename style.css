@@ -136,15 +136,15 @@ i {
     transition: margin 0.3s;
 }
 
-.btn-new { top: 45px;}
+.btn-new { top: 55px;}
 .btn-roll { top: 403px;}
 .btn-hold { top: 467px;}
 .helpbtn { 
-    top: 15px;
+    top: 20px;
 }
 
 #zaavar {
-    top: 20px;
+    top: 25px;
     background: #555;
     width: 300px;
     font-size: 12px;
