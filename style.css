@@ -139,6 +139,19 @@ i {
 .btn-new { top: 45px;}
 .btn-roll { top: 403px;}
 .btn-hold { top: 467px;}
+.helpbtn { 
+    top: 15px;
+}
+
+#zaavar {
+    top: 20px;
+    background: #555;
+    width: 300px;
+    font-size: 12px;
+    text-justify: auto;
+    color: #fff;
+    font-style: italic;
+}
 
 .dice {
     position: absolute;

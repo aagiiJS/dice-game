@@ -5,6 +5,8 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
         <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
         <link type="text/css" rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         
         <title>Шоо хаях тоглоом</title>
     </head>
@@ -32,6 +34,20 @@
             <button class="btn-new"><i class="ion-ios-plus-outline"></i>Start game</button>
             <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
             <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
+            <button class="helpbtn" id ="zaavar">
+                <span data-toggle="popover" data-placement="bottom" data-content="Заавар: Roll dice товч дарж шоогоо хаяна. Шоо 1 буувал 
+                таны оноо устаж ээлж нөгөө тоглогчид шилжинэ. Иймд оноогоо Hold товч дарж цуглууна. Түрүүлж 100 оноо цуглуулсан
+                тоглогч хожно. Шинээр эхлэхдээ Start game товч дарж эхлүүлнэ." 
+                 data-trigger="hover" data-original-title="" title="">
+                    <img src="helpBtn.png" width="25px" height="25px"></span>
+            </button>
+                          
+              <script>
+              $(document).ready(function(){
+                  $('[data-toggle="popover"]').popover();   
+              });
+              </script>
+                
             
             <img src="dice-5.png" alt="Dice" class="dice">
         </div>
